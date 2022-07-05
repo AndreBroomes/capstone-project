@@ -43,7 +43,7 @@ return (
         <Card.Body>
         <Card.Title><h2>Login to your account</h2></Card.Title>
         <Card.Text>
-        Enter your info to access cooking groups near you.
+        Enter your info to access soccer events near you.
         </Card.Text>
 
         <form onSubmit={handleSubmit}>

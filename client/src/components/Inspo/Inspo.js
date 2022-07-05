@@ -3,7 +3,7 @@ import NavBar from '../NavBar/NavBar';
 import SearchBar from "./SearchBar";
 import RecipeCard from "./RecipeCard";
 
-const searchApi = "https://www.themealdb.com/api/json/v1/1/search.php?s=";
+const searchApi = "/teams";
 
 export default function Inspo() {
   const [isLoading, setIsLoading] = useState(false);
@@ -16,7 +16,7 @@ export default function Inspo() {
     const url = searchApi + query
     const res = await fetch(url);
     const data = await res.json();
-    setRecipes(data.meals);
+    setRecipes(data);
     setIsLoading(false);
   };
 
@@ -36,8 +36,8 @@ export default function Inspo() {
       <br />
       <br />
     <div className="recipe-container">
-      <h2 className="inspo-title">Recipe Search</h2>
-      <h4>Find dishes to inspire your next meeting or<br/> use as a conversation piece for your future culinary friends.</h4>
+      <h2 className="inspo-title">MLS Team Search</h2>
+      <h4>Find your local Major Leage Soccer Team <br/> use as a conversation piece for your future soccer friends.</h4>
       <SearchBar
         isLoading={isLoading}
         query={query}
@@ -48,7 +48,7 @@ export default function Inspo() {
         
         {recipes ? recipes.map(recipe => (
           <RecipeCard
-             key={recipe.idMeal}
+             key={recipe.id}
              recipe={recipe}
           />
         )) : "No Results"}

@@ -105,9 +105,9 @@ console.log(topicId)
                 onChange={handleImgURLChange}
               ></input>
               <br />
-              <label>Topic</label>
+              {/* <label>Topic</label> */}
 
-              <select className="MeetupForm" id="topics" onChange={handleTopicChange}>
+              {/* <select className="MeetupForm" id="topics" onChange={handleTopicChange}>
                 <option value="" selected disabled hidden>
                   Choose Cuisine
                 </option>
@@ -123,7 +123,7 @@ console.log(topicId)
                 <option value="10">Moroccan</option>
                 <option value="11">Peruvian</option>
                 <option value="12">Dutch</option>
-              </select>
+              </select> */}
               <br />
               <br />
               <br />

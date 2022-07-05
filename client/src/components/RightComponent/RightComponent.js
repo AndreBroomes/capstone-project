@@ -28,8 +28,8 @@ console.log(user.topics)
 
     return (
       <div className="RightComponent">
-        <h2>Cuisine Interests</h2>
-        <h4>Get the latest food articles, recipes, and meetup notifications to your email about your selected interests from Chefish.</h4>
+        <h2>Soccer Interests</h2>
+        <h4>Get the latest soccers articles, professional athletes, and meetup notifications to your email about your selected interests from soccer meetups.</h4>
         <div className="cuisine-card">
         {user.topics &&
           user.topics.map((t) => {

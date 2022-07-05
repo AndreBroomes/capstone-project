@@ -11,7 +11,7 @@ export default function CenterComponentProfile({ handleClick, user, setUser, mee
             <h3>Name: {user.first_name}</h3>
             <h3>Email: {user.email}</h3>
             <hr/>
-            <p>Looking to host your own cooking class or meetup?</p>
+            <p>Looking to host a soccer meetup?</p>
             <button className="host-new-btn" onClick={handleClick}>
               Host New Event
             </button>

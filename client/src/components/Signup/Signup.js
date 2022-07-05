@@ -56,7 +56,7 @@ console.log(topicArray)
             <Card.Body>
             <Card.Title><h2>Sign up a new account</h2></Card.Title>
             <Card.Text>
-            Sign up to join cooking meetups near you.
+            Sign up to join soccer meetups near you.
             </Card.Text>
     
             <form onSubmit={handleSubmit}>

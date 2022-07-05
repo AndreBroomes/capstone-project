@@ -7,7 +7,7 @@ export default function CenterComponent({ user, setUser, meetups, joinMeetup }) 
     <>
     <div className="center-component-title">
       <h2>Upcoming meetups</h2>
-      <h4>Meet new people who share your culinary interests.</h4>
+      <h4>Meet local soccer players and team up!</h4>
     </div>  
     <div className="CenterComponent">
           <MeetupList

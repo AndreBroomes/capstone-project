@@ -1,25 +1,25 @@
 import React from 'react'
 
 export default function RecipeCard({ recipe }) {
-    const { idMeal, strMeal, strArea, strMealThumb } = recipe;
+    const { name, location, image, webpage } = recipe;
         
         return (
             <div className="recipe-card">
                 <img
-                    src={strMealThumb}
-                    alt={strMeal}
+                    src={image}
+                    alt={name}
                     className="card-image"
                 />
                 <div className="card-body">
-                    <h3 className="meal-title">{strMeal}</h3>
-                    <span className="recipe-category">{strArea}
+                    <h3 className="meal-title">{name}</h3>
+                    <span className="recipe-category">{location}
                     </span>
                     <br/><br/><br/>
                     <a 
-                    href={"https://www.themealdb.com/meal/" + idMeal} 
+                    href={webpage} 
                     target="_blank"
                     rel="noreferrer"
-                    className="instructions-link">Instructions</a>
+                    className="instructions-link">Tickets</a>
                 </div>
             </div>
         )

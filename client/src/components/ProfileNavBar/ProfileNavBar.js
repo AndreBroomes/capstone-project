@@ -6,7 +6,7 @@ export default function ProfileNavBar() {
     return (
       <div className="NavBar">
         <div className="Logo">
-          chefish
+          Soccer Meetups
         </div>
         <div className="SearchBar"></div>
       </div>
