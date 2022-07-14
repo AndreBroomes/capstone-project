@@ -8,25 +8,25 @@ const searchApi = "/teams";
 export default function Inspo() {
   const [isLoading, setIsLoading] = useState(false);
   const [query, setQuery] = useState("");
-  const [tickets, setTickets] = useState([]);
+  const [recipes, setRecipes] = useState([]);
   
   // search for the recipe
-  const searchTickets = async () => {
+  const searchRecipes = async () => {
     setIsLoading(true);
     const url = searchApi + query
     const res = await fetch(url);
     const data = await res.json();
-    setTickets(data);
+    setRecipes(data);
     setIsLoading(false);
   };
 
   useEffect(() => {
-    searchTickets()
+    searchRecipes()
   }, []);
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    searchTickets();
+    searchRecipes();
   }
 
   return (
@@ -46,10 +46,10 @@ export default function Inspo() {
       />
       <div className="recipes">
         
-        {tickets ? tickets.map(ticket => (
+        {recipes ? recipes.map(recipe => (
           <RecipeCard
-             key={ticket.id}
-             ticket={ticket}
+             key={recipe.id}
+             recipe={recipe}
           />
         )) : "No Results"}
       </div>
