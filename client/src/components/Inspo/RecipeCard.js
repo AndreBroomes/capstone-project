@@ -1,7 +1,7 @@
 import React from 'react'
 
-export default function RecipeCard({ recipe }) {
-    const { name, location, image, webpage } = recipe;
+export default function RecipeCard({ ticket }) {
+    const { name, location, image, webpage } = ticket;
         
         return (
             <div className="recipe-card">

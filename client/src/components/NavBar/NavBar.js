@@ -25,7 +25,7 @@ export default function NavBar({ searchWord, handleChange, userInfo, user, setUs
               <Nav.Link href="/">Home</Nav.Link>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-              <Nav.Link href="/recipes">Tickets</Nav.Link>
+              <Nav.Link href="/tickets">Tickets</Nav.Link>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
               <Nav.Link href="/profile">Account</Nav.Link>
