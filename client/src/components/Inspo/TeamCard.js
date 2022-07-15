@@ -1,10 +1,10 @@
 import React from 'react'
 
-export default function RecipeCard({ recipe }) {
-    const { name, location, image, webpage } = recipe;
+export default function TeamCard({ team }) {
+    const { name, location, image, webpage } = team;
         
         return (
-            <div className="recipe-card">
+            <div className="team-card">
                 <img
                     src={image}
                     alt={name}

@@ -1,32 +1,32 @@
 import React, { useState, useEffect } from "react";
 import NavBar from '../NavBar/NavBar';
 import SearchBar from "./SearchBar";
-import RecipeCard from "./RecipeCard";
+import TeamCard from "./TeamCard";
 
 const searchApi = "/teams";
 
 export default function Inspo() {
   const [isLoading, setIsLoading] = useState(false);
   const [query, setQuery] = useState("");
-  const [recipes, setRecipes] = useState([]);
+  const [teams, setTeams] = useState([]);
   
-  // search for the recipe
-  const searchRecipes = async () => {
+
+  const searchTeams = async () => {
     setIsLoading(true);
     const url = searchApi + query
     const res = await fetch(url);
     const data = await res.json();
-    setRecipes(data);
+    setTeams(data);
     setIsLoading(false);
   };
 
   useEffect(() => {
-    searchRecipes()
+    searchTeams()
   }, []);
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    searchRecipes();
+    searchTeams();
   }
 
   return (
@@ -46,10 +46,10 @@ export default function Inspo() {
       />
       <div className="recipes">
         
-        {recipes ? recipes.map(recipe => (
-          <RecipeCard
-             key={recipe.id}
-             recipe={recipe}
+        {teams ? teams.map(team => (
+          <TeamCard
+             key={team.id}
+             team={team}
           />
         )) : "No Results"}
       </div>
