@@ -36,7 +36,7 @@ function App() {
             setUser(null);
         }
     });
-    // Navigate to homepage after logout and clear history
+   
     navigate("/");
 }
 
